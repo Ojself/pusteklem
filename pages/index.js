@@ -32,16 +32,8 @@ export default function Home() {
               </span>
             </h1>
             <p className='text-xs w-2/3 sm:w-2/5 md:w-1/3 mt-4'>
-              This guide is made with heavy inspiration from{" "}
-              <a
-                rel='noopener noreferrer'
-                target='_blank'
-                href='https://www.wikihow.com'
-              >
-                wikihow
-              </a>{" "}
-              and will take you through the steps on performing a quality hug:
-              Pusteklem.
+              This guide will take you through the steps on how to perform a
+              quality hug: Pusteklem.
             </p>
           </section>
           <section className='bg-transparent rounded-lg flex flex-col items-center'>
