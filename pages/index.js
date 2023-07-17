@@ -1,88 +1,54 @@
-import { useState } from "react";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import { useState } from "react";
+
+import StepsWrapper from "../components/StepsWrapper";
+import data from "../data/parts.json";
 
 export default function Home() {
-  const [horsePosition, setHorsePosition] = useState(0);
-
-  const handleClick = () => {
-    const newIntervalId = setInterval(() => {
-      let random = Math.random() * 5 + 2;
-      setHorsePosition((prevPosition) => prevPosition - random);
-    }, 80);
-  };
-
+  const [easterEgg, setEasterEgg] = useState(false);
+  const title = easterEgg
+    ? "Slutt å trykk overalt!"
+    : "How to perform a Pusteklem!";
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Pusteklem</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main>
-        <h1 className={styles.title}>
-          Welcome to <span>Pusteklem!</span>
-        </h1>
-
-        <p>🫂</p>
+      <main className='p-2 flex flex-col justify-center items-center w-full bg-gray-100'>
+        <div
+          style={{ maxWidth: "750px" }}
+          className='w-full sm:w-5/6 md:w-3/4 lg:w-2/3 xl:w-7/12 2xl:w-6/12 mt-8 mb-10 md:mb-14 '
+        >
+          <section className='mb-12 mt-6 bg-white rounded-md py-12 pl-6 flex flex-col items-center'>
+            <h1 className=' text-3xl font-semibold'>
+              {title}
+              <span
+                className='cursor-default'
+                onClick={() => setEasterEgg(true)}
+              >
+                {easterEgg ? <span> {"😅"} </span> : <span>{"🫂"}</span>}
+              </span>
+            </h1>
+          </section>
+          <section className='bg-transparent rounded-lg flex flex-col items-center'>
+            {data.map((part, index) => {
+              return (
+                <StepsWrapper part={part} partNumber={index + 1} key={index} />
+              );
+            })}
+          </section>
+          <section className='bg-white rounded-lg flex flex-col items-center mt-12'>
+            <p className='rounded-lg p-4'>
+              <span className='font-bold'>Remember</span>, the breathing hug is
+              intended to create a peaceful and calming experience. It can be a
+              wonderful way to connect with someone and cultivate a sense of
+              serenity. Enjoy the moment and the shared breath!
+            </p>
+          </section>
+        </div>
       </main>
-
-      <footer style={{ position: "relative" }}>
-        <p>
-          Powered by{" "}
-          <span
-            onClick={handleClick}
-            style={{
-              cursor: "pointer",
-              position: "absolute",
-              transform: `translateX(${horsePosition}px)`,
-            }}
-          >
-            🐎
-          </span>
-        </p>
-      </footer>
-
-      <style jsx>{`
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        main p {
-          text-decoration: none;
-          color: inherit;
-          font-size: 10rem;
-        }
-        main span {
-          color: #0070f3;
-        }
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
+    </>
   );
 }
