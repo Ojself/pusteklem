@@ -8,7 +8,6 @@ const Step = ({ step, partNumber, stepNumber }) => {
       <a name={`step_${partNumber}_${stepNumber}`} className='hidden'></a>
       <div>
         <Image
-          className=''
           src={`/images/steps/${img}`}
           alt={`Picture of the ${title} step`}
           height={1000}
