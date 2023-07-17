@@ -18,7 +18,7 @@ const Step = ({ step, partNumber, stepNumber }) => {
         <h2 className='text-3xl font-bold inline px-3 text-center text-grey'>
           {stepNumber}
         </h2>
-        <p className='pb-4'>
+        <p className='pb-4 px-2'>
           <span className='font-bold text-grey'>{title}</span> {text}
         </p>
       </div>
