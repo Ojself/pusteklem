@@ -21,8 +21,8 @@ export default function Home() {
           style={{ maxWidth: "750px" }}
           className='w-full sm:w-5/6 md:w-3/4 lg:w-2/3 xl:w-7/12 2xl:w-6/12 mt-8 mb-10 md:mb-14 '
         >
-          <section className='mb-12 mt-6 bg-white rounded-md py-12 pl-6 flex flex-col items-center'>
-            <h1 className=' text-3xl font-semibold'>
+          <section className='mb-12 mt-6 bg-white rounded-md py-12 pl-6  items-center'>
+            <h1 className=' text-3xl font-semibold text-center'>
               {title}
               <span
                 className='cursor-default'
@@ -31,6 +31,18 @@ export default function Home() {
                 {easterEgg ? <span> {"😅"} </span> : <span>{"🫂"}</span>}
               </span>
             </h1>
+            <p className='text-xs w-2/3 sm:w-2/5 md:w-1/3 mt-4'>
+              This guide is made with heavy inspiration from{" "}
+              <a
+                rel='noopener noreferrer'
+                target='_blank'
+                href='https://www.wikihow.com'
+              >
+                wikihow
+              </a>{" "}
+              and will take you through the steps on performing a quality hug:
+              Pusteklem.
+            </p>
           </section>
           <section className='bg-transparent rounded-lg flex flex-col items-center'>
             {data.map((part, index) => {

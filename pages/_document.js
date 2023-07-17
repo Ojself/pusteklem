@@ -85,7 +85,6 @@ export default class MyDocument extends Document {
           <meta name='msapplication-config' content='/browserconfig.xml' />
 
           <link rel='shortcut icon' href='/favicon.ico' />
-          <link rel='manifest' href='/manifest.json' />
           <meta name='theme-color' content='#ACACAC' />
           <meta name='description' content='Pusteklem' />
 

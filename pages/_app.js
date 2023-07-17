@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    console.log("Puster du? 👉 tormod.flesjo@gmail.com.no");
+    console.log("Puster du? 👉 tormod.flesjo@gmail.com");
   }, []);
 
   return (
