@@ -31,10 +31,11 @@ export default function Home() {
                 {easterEgg ? <span> {"😅"} </span> : <span>{"🫂"}</span>}
               </span>
             </h1>
-            <p className='text-xs w-2/3 sm:w-2/5 md:w-1/3 mt-4'>
+            <p className='text-xs mt-4 w-1/3'>
               This guide will take you through the steps on how to perform a
-              quality hug: Pusteklem.
+              quality hug:
             </p>
+            <p className='italic text-xs m-1'>Pusteklem.</p>
           </section>
           <section className='bg-transparent rounded-lg flex flex-col items-center'>
             {data.map((part, index) => {
