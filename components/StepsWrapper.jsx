@@ -4,8 +4,8 @@ import Step from "./Step";
 const StepsWrapper = ({ part, partNumber }) => {
   const { title, steps } = part;
   return (
-    <div className='relative rounded-lg bg-white w-fit mb-4 md:mb-6'>
-      <div className='flex flex-row sticky top-0 bg-white z-10 rounded-tl-lg'>
+    <div className='relative w-fit mb-4 md:mb-6'>
+      <div className='flex flex-row sticky top-0 bg-white z-10'>
         <div
           style={{ maxWidth: "64px" }}
           className='flex flex-col w-1/5 h-16 justify-center items-center bg-primary text-white rounded-tl-lg'

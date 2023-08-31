@@ -21,9 +21,9 @@ export default function Home() {
         >
           <section className='mb-12 mt-6 bg-white rounded-md py-12 pl-6  items-center'>
             <h1 className=' text-3xl font-semibold text-center relative'>
-              How to perform a Pusteklem!
+              How to perform a Pusteklem
               <span
-                className={`cursor-default absolute ${easterEggAnimation}`}
+                className={`ml-1 cursor-default absolute ${easterEggAnimation}`}
                 onClick={() => {
                   setEasterEgg(true);
                   setTimeout(() => {
@@ -40,7 +40,7 @@ export default function Home() {
             </p>
             <p className='italic text-xs m-1'>Pusteklem.</p>
           </section>
-          <section className='bg-transparent rounded-lg flex flex-col items-center'>
+          <section className='flex flex-col items-center'>
             {data.map((part, index) => {
               return (
                 <StepsWrapper part={part} partNumber={index + 1} key={index} />
