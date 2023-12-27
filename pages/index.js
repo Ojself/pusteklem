@@ -20,7 +20,7 @@ export default function Home() {
           className='w-full sm:w-5/6 md:w-3/4 lg:w-2/3 xl:w-7/12 2xl:w-6/12 mt-8 mb-10 md:mb-14 '
         >
           <section className='mb-12 mt-6 bg-white rounded-md py-12 pl-6  items-center'>
-            <h1 className=' text-3xl font-semibold text-center relative'>
+            <h1 className='text-3xl font-semibold text-center relative'>
               How to perform a Pusteklem
               <span
                 className={`ml-1 cursor-default absolute ${easterEggAnimation}`}
@@ -34,7 +34,7 @@ export default function Home() {
                 {"🫂"}
               </span>
             </h1>
-            <p className='text-xs mt-4 w-1/3'>
+            <p className='text-xs mt-4 w-2/5 md:w-1/3'>
               This guide will take you through the steps on how to perform a
               quality hug:
             </p>
